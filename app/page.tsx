@@ -1,101 +1,216 @@
-import Image from "next/image";
 
 export default function Home() {
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* for navbar */}
+      <header id="top">
+        <div className="navbar">
+          <div className="nav-logo border">
+            <div className="logo"> </div>
+          </div>
+          <div className="nav-address border">
+            <p className="add-first">Deliver to</p>
+            <div className="add-icon">
+              <i className="fa-solid fa-location-dot"></i>
+              <p className="add-sec">PAKISTAN</p>
+            </div>
+          </div>
+          <div className="nav-search">
+            <select className="search-select">
+              <option value="">All</option>
+            </select>
+            <input placeholder="Search Amazon" className="search-input" />
+            <div className="search-icon">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="nav-singin border">
+            <p>
+              <span>Hello, SignIn</span>
+            </p>
+            <p className="nav-second">Account & Lists</p>
+          </div>
+
+          <div className="nav-return border">
+            <p>
+              <span>Return</span>
+            </p>
+            <p className="nav-second">& Orders</p>
+          </div>
+
+          <div className="nav-cart border">
+            <i className="fa-solid fa-cart-plus"></i>
+            Cart
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="panel">
+          <div className="panel-all border">
+            <i className="fa-solid fa-bars"></i>
+            All
+          </div>
+          <div className="panel-ops">
+            <p className="border">Today's Deals</p>
+            <p className="border">Customer Service</p>
+            <p className="border">Registry</p>
+            <p className="border">Gift Cards</p>
+            <p className="border">Sell</p>
+          </div>
+          <div className="panel-deals border">Shop deals in Electronics</div>
+        </div>
+      </header>
+
+      <div className="hero-section">
+        <div className="hero-mesg">
+          <p>
+            You on amazon.com. You can also shop on Amazon Pakistan for millions
+            products with fast delivery.
+            <a href="">Click here to go to amazon.in</a>
+          </p>
+        </div>
+      </div>
+      {/* for  hero section */}
+      <div className="shop-section">
+        <div className=" box">
+          <div className="box-content">
+            <h2>Gaming accessories</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box1.webp")' }}
+            ></div>
+            <a href="">See more</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>Shop for your home essentials</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box2.webp")' }}
+            ></div>
+            <a href="">Discover more in Home</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>New home arrivals under $50</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box3.jpg")' }}
+            ></div>
+            <a href="">Shop the latest from Home</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>Shop deal in Fashion</h2>
+            <div
+              className="box-img4"
+              style={{ backgroundImage: 'url("/image/box4.jpg")' }}
+            ></div>
+            <a href="">See all deals</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>Wireless Tech</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box5.jpg")' }}
+            ></div>
+            <a href="">Discover more</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>Level up your beauty routine</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box6.jpg")' }}
+            ></div>
+            <a href="">See more</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>Most-loved watches</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box7.jpg")' }}
+            ></div>
+            <a href="">Discover more</a>
+          </div>
+        </div>
+        <div className=" box">
+          <div className="box-content">
+            <h2>Toys for all ages</h2>
+            <div
+              className="box-img"
+              style={{ backgroundImage: 'url("/image/box8.jpg")' }}
+            ></div>
+            <a href="">See all</a>
+          </div>
+        </div>
+      </div>
+      {/* for footer */}
+      <footer>
+        <div className="foot-panel1">
+         <a href="#top">Back to top</a>
+        </div>
+        <div className="foot-panel2">
+          <ul>
+            <p>Get to Know Us</p>
+            <a href="">Careers</a>
+            <a href="">Blog</a>
+            <a href="">About Amazon</a>
+            <a href="">Investor Relations</a>
+            <a href="">Amazon Devices</a>
+            <a href="">Amazon Science</a>
+          </ul>
+          <ul>
+            <p>Make Money with Us</p>
+            <a href="">Sell products on Amazon</a>
+            <a href="">Sell on Amazon Business</a>
+            <a href="">Sell apps on Amazon</a>
+            <a href="">Advertise Your Products</a>
+            <a href="">Self-Publish with Us</a>
+            <a href="">Host an Amazon Hub</a>
+            <a href="">›See More Make Money with Us</a>
+          </ul>
+          <ul>
+            <p>Amazon Payment Products</p>
+          <a href="">Amazon Business Card</a>
+          <a href="">Shop with Points</a>
+          <a href="">Reload Your Balance</a>
+          <a href="">Amazon Currency Converter
+          </a>
+          </ul>
+          <ul>
+            <p>Let Us Help You</p>
+            <a href="">Amazon and COVID-19</a>
+            <a href="">Your Account</a>
+            <a href="">Your Orders</a>
+            <a href="">Shipping Rates & Policies</a>
+            <a href="">Returns & Replacements</a>
+            <a href="">Manage Your Content and Devices</a>
+            <a href="">Help</a>
+          </ul>
+        </div>
+        <div className="foot-panel3">
+          <div className="logo1"></div>
+        </div>
+        <div className="foot-panel4">
+          <div className="pages">
+            <a href="">Conditions of Use</a>
+            <a href="">Privacy Notice</a>
+            <a href="">Consumer Health Data Privacy Disclosure</a>
+          </div>
+          <div className="copyright">
+          © 1996-2024, Amazon.com,Clone made by MUHAMMAD QASIM
+          </div>
+        </div>
       </footer>
-    </div>
+    </>
   );
 }
